@@ -28,7 +28,7 @@ android {
 
         quiet false
         abortOnError true
-        ignoreWarnings true
+        ignoreWarnings false
     }
 }
 
