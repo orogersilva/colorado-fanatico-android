@@ -2,27 +2,26 @@ package com.orogersilva.coloradofanatico.model;
 
 import com.orogersilva.coloradofanatico.ColoradoFanaticoApp;
 import com.orogersilva.coloradofanatico.di.component.AppComponent;
-
-import io.realm.Realm;
+import com.raizlabs.android.dbflow.structure.BaseModel;
 
 /**
  * Created by orogersilva on 1/30/2016.
  */
-public class BaseModel {
+public class Model {
 
     // region FIELDS
 
-    protected final Realm mRealm;
     protected final AppComponent mAppComponent;
+    protected final ColoradoFanaticoDatabase mDatabase;
 
     // endregion
 
     // region CONSTRUCTORS
 
-    public BaseModel(ColoradoFanaticoApp app, Realm realm) {
+    public Model(ColoradoFanaticoApp app, ColoradoFanaticoDatabase database) {
 
-        mRealm = realm;
         mAppComponent = app.getAppComponent();
+        mDatabase = database;
     }
 
     // endregion

@@ -1,44 +1,34 @@
 package com.orogersilva.coloradofanatico.model;
 
-import android.content.Context;
-
 import com.orogersilva.coloradofanatico.ColoradoFanaticoApp;
 import com.orogersilva.coloradofanatico.vo.Fan;
-
-import io.realm.Realm;
+import com.orogersilva.coloradofanatico.vo.Fan_Table;
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 /**
  * Created by orogersilva on 1/30/2016.
  */
-public class FanModel extends BaseModel {
-
-    // region FIELDS
-
-    private Context mContext;
-
-    // endregion
+public class FanModel extends Model {
 
     // region CONSTRUCTORS
 
-    public FanModel(ColoradoFanaticoApp app, Realm realm) {
+    public FanModel(ColoradoFanaticoApp app, ColoradoFanaticoDatabase database) {
 
-        super(app, realm);
+        super(app, database);
     }
 
     // endregion
 
     // region CRUD
 
-    public void createFan(Fan fan) {
-
-        mRealm.beginTransaction();
-        mRealm.copyToRealm(fan);
-        mRealm.commitTransaction();
-    }
-
     public Fan retrieveFan(String username) {
 
-        Fan fan = mRealm.where(Fan.class).equalTo("username", username).findFirst();
+        Fan fan = SQLite.select()
+                .from(Fan.class)
+                .where(Fan_Table.username.eq(username))
+                .querySingle();
 
         return fan;
     }
