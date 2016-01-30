@@ -7,9 +7,14 @@ import com.orogersilva.coloradofanatico.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    // region ACTIVITY LIFECYCLE METHODS
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    // endregion
 }
