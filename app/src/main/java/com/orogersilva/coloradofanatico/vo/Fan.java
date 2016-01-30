@@ -1,5 +1,7 @@
 package com.orogersilva.coloradofanatico.vo;
 
+import android.support.annotation.VisibleForTesting;
+
 import com.orogersilva.coloradofanatico.exception.ValidationFailedException;
 import com.orogersilva.coloradofanatico.interfaces.Validation;
 import com.orogersilva.coloradofanatico.model.ColoradoFanaticoDatabase;
@@ -20,6 +22,17 @@ public class Fan extends BaseModel implements Validation {
     @PrimaryKey
     @Column
     String username;
+
+    // endregion
+
+    // region CONSTRUCTORS
+
+    public Fan() {}
+
+    public Fan(String username) {
+
+        setUsername(username);
+    }
 
     // endregion
 

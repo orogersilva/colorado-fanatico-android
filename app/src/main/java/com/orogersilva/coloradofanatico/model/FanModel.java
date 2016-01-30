@@ -3,8 +3,7 @@ package com.orogersilva.coloradofanatico.model;
 import com.orogersilva.coloradofanatico.ColoradoFanaticoApp;
 import com.orogersilva.coloradofanatico.vo.Fan;
 import com.orogersilva.coloradofanatico.vo.Fan_Table;
-import com.raizlabs.android.dbflow.annotation.Column;
-import com.raizlabs.android.dbflow.annotation.Table;
+
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 /**
