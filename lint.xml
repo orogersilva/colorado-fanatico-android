@@ -2,8 +2,8 @@
 <lint>
 
     <!-- Changing severity of AllowBackup -->
-    <issue id="AllowBackup" severity="ignore" />
+    <issue id="AllowBackup" severity="informational" />
     <!-- Changing severity of GoogleAppIndexingWarning -->
-    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+    <issue id="GoogleAppIndexingWarning" severity="informational" />
 
 </lint>
