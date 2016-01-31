@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
+apply from: "${rootProject.getRootDir()}/jacoco.gradle"
+
 android {
 
     compileSdkVersion 'Google Apis:Google Apis:23'
@@ -16,6 +18,10 @@ android {
     }
 
     buildTypes {
+
+        debug {
+            testCoverageEnabled = true
+        }
 
         release {
             minifyEnabled false
