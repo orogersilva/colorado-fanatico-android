@@ -23,15 +23,23 @@ public class Fan extends BaseModel implements Validation {
     @Column
     String username;
 
+    @Column
+    String fullName;
+
+    @Column
+    int quantityCheckin;
+
     // endregion
 
     // region CONSTRUCTORS
 
     public Fan() {}
 
-    public Fan(String username) {
+    public Fan(String username, String fullName, int quantityCheckin) {
 
         setUsername(username);
+        setFullName(fullName);
+        setQuantityCheckin(quantityCheckin);
     }
 
     // endregion
@@ -46,6 +54,26 @@ public class Fan extends BaseModel implements Validation {
     public void setUsername(String username) {
 
         this.username = username;
+    }
+
+    public String getFullName() {
+
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+
+        this.fullName = fullName;
+    }
+
+    public int getQuantityCheckin() {
+
+        return quantityCheckin;
+    }
+
+    public void setQuantityCheckin(int quantityCheckin) {
+
+        this.quantityCheckin = quantityCheckin;
     }
 
     // endregion
