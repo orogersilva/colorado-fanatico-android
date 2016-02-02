@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.orogersilva.coloradofanatico">
+    package="com.orogersilva.coloradissimo">
 
     <application
         android:allowBackup="true"
@@ -8,9 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".ColoradoFanaticoApp">
+        android:name=".ColoradissimoApp">
 
-        <activity android:name=".view.activity.MainActivity">
+        <activity android:name="com.orogersilva.coloradissimo.view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
