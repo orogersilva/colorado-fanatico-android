@@ -66,6 +66,7 @@ public class FanTest {
     public void validate_whenUsernameIsEmpty_throwsValidationFailedException() {
 
         // ARRANGE
+
         final String EXPECTED_EXCEPTION_MESSAGE = "Invalid username";
         final String TEST_ERROR_MESSAGE = "ValidationFailedException would must has been thrown.";
 
@@ -90,14 +91,16 @@ public class FanTest {
     }
 
     @Test
-    public void validate_whenUsernameIsValid_validationIsSuccessfully() {
+    public void validate_whenUsernameIsValid_validationIsSuccessfull() {
 
         // ARRANGE
+
         final String VALID_USER_NAME = "orogersilva";
 
         mFan.setUsername(VALID_USER_NAME);
 
         // ACT/ASSERT
+
         mFan.validate();
     }
 

@@ -1,6 +1,7 @@
 package com.orogersilva.coloradissimo;
 
 import android.app.Application;
+import android.support.annotation.VisibleForTesting;
 
 import com.orogersilva.coloradissimo.di.component.AppComponent;
 import com.orogersilva.coloradissimo.di.component.DaggerAppComponent;
@@ -40,6 +41,12 @@ public class ColoradissimoApp extends Application {
 
     public AppComponent getAppComponent() {
         return mAppComponent;
+    }
+
+    @VisibleForTesting
+    public void setTestComponent(AppComponent appComponent) {
+
+        mAppComponent = appComponent;
     }
 
     // endregion

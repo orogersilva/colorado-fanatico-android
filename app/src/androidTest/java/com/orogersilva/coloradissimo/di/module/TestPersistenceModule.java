@@ -1,7 +1,5 @@
 package com.orogersilva.coloradissimo.di.module;
 
-import android.database.sqlite.SQLiteDatabase;
-
 import com.orogersilva.coloradissimo.ColoradissimoApp;
 import com.orogersilva.coloradissimo.model.ColoradissimoDatabase;
 import com.orogersilva.coloradissimo.model.FanModel;
@@ -14,10 +12,10 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by orogersilva on 1/30/2016.
+ * Created by orogersilva on 2/2/2016.
  */
 @Module
-public class PersistenceModule {
+public class TestPersistenceModule {
 
     // region FIELDS
 
@@ -27,7 +25,7 @@ public class PersistenceModule {
 
     // region CONSTRUCTORS
 
-    public PersistenceModule(ColoradissimoApp app) {
+    public TestPersistenceModule(ColoradissimoApp app) {
 
         mApp = app;
     }

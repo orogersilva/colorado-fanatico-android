@@ -10,7 +10,7 @@ public class ColoradissimoDatabase {
 
     // region CONSTANTS
 
-    public static final String NAME = "ColoradoFanatico";
+    public static final String NAME = "Coloradissimo";
     public static final int VERSION = 1;
 
     // endregion
