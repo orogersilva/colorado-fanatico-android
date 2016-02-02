@@ -47,6 +47,7 @@ public class FanTest {
         mFan.setUsername(NULL_USER_NAME);
 
         // ACT/ASSERT
+
         try {
 
             mFan.validate();
@@ -59,6 +60,45 @@ public class FanTest {
         }
 
         fail(TEST_ERROR_MESSAGE);
+    }
+
+    @Test(expected = ValidationFailedException.class)
+    public void validate_whenUsernameIsEmpty_throwsValidationFailedException() {
+
+        // ARRANGE
+        final String EXPECTED_EXCEPTION_MESSAGE = "Invalid username";
+        final String TEST_ERROR_MESSAGE = "ValidationFailedException would must has been thrown.";
+
+        final String EMPTY_USER_NAME = null;
+
+        mFan.setUsername(EMPTY_USER_NAME);
+
+        // ACT/ASSERT
+
+        try {
+
+            mFan.validate();
+
+        } catch (ValidationFailedException e) {
+
+            assertEquals(EXPECTED_EXCEPTION_MESSAGE, e.getMessage());
+
+            throw e;
+        }
+
+        fail(TEST_ERROR_MESSAGE);
+    }
+
+    @Test
+    public void validate_whenUsernameIsValid_validationIsSuccessfully() {
+
+        // ARRANGE
+        final String VALID_USER_NAME = "orogersilva";
+
+        mFan.setUsername(VALID_USER_NAME);
+
+        // ACT/ASSERT
+        mFan.validate();
     }
 
     // endregion
