@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.orogersilva.coloradofanatico.di.component.AppComponent;
 import com.orogersilva.coloradofanatico.di.component.DaggerAppComponent;
-import com.orogersilva.coloradofanatico.di.module.DatabaseModule;
+import com.orogersilva.coloradofanatico.di.module.PersistenceModule;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 /**
@@ -30,7 +30,7 @@ public class ColoradoFanaticoApp extends Application {
 
         // Initialing Dagger...
         mAppComponent = DaggerAppComponent.builder()
-                .databaseModule(new DatabaseModule(this))
+                .persistenceModule(new PersistenceModule(this))
                 .build();
     }
 

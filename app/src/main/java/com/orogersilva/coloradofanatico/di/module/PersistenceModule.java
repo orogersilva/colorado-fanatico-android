@@ -13,7 +13,7 @@ import dagger.Provides;
  * Created by orogersilva on 1/30/2016.
  */
 @Module
-public class DatabaseModule {
+public class PersistenceModule {
 
     // region FIELDS
 
@@ -23,7 +23,7 @@ public class DatabaseModule {
 
     // region CONSTRUCTORS
 
-    public DatabaseModule(ColoradoFanaticoApp app) {
+    public PersistenceModule(ColoradoFanaticoApp app) {
 
         mApp = app;
     }
