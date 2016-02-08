@@ -1,5 +1,17 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- DataItem Fan dimensions - BEGIN -->
+
+    <dimen name="dataitem_fan_paddingTop">15dp</dimen>
+    <dimen name="dataitem_fan_paddingRight">15dp</dimen>
+    <dimen name="dataitem_fan_paddingBottom">15dp</dimen>
+    <dimen name="dataitem_fan_paddingLeft">15dp</dimen>
+
+    <dimen name="imageview_fan_height">40dp</dimen>
+
+    <dimen name="textview_fullname_size">20sp</dimen>
+    <dimen name="textview_quantity_checkin_size">30sp</dimen>
+
+    <!-- DataItem Fan dimensions - END -->
+
 </resources>
