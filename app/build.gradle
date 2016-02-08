@@ -5,7 +5,7 @@ apply from: "${rootProject.getRootDir()}/jacoco.gradle"
 
 android {
 
-    compileSdkVersion 'Google Apis:Google Apis:23'
+    compileSdkVersion 'android-23'
     buildToolsVersion "23.0.2"
 
     defaultConfig {
