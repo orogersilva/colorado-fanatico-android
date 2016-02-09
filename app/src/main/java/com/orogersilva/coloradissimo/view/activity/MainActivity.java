@@ -42,7 +42,8 @@ public class MainActivity extends BaseActivity {
 
         fans.add(new Fan("orogersilva", "Roger Silva", 3));
         fans.add(new Fan("iarats", "Iara Silva", 4));
-        fans.add(new Fan("orogersilva", "Roger Silva", 3));
+        fans.add(new Fan("orogersilva2", "Roger T A da Silva", 3));
+        fans.add(new Fan("orogersilva3", "Roger T Silva", 5));
 
         mFanAdapter = new FanAdapter(fans);
         mFanRecyclerView.setAdapter(mFanAdapter);
